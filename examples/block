@@ -1,0 +1,7 @@
+100 * {i: puts i}
+
+myloop=:
+	x86::loop myloop
+
+f = {x: x*2-1}
+y = f(10)

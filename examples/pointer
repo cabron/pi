@@ -1,0 +1,10 @@
+int firstvalue, secondvalue, @p1, @p2
+
+p1 = ->firstvalue
+p2 = ->secondvalue
+
+@p1 = 10
+@p2 = 20
+
+puts "firstvalue is " + firstvalue + ascii::lf
+puts "secondvalue is " + firstvalue + ascii::lf

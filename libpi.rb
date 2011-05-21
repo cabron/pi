@@ -1,7 +1,4 @@
-#!/usr/bin/env ruby
-
 require 'strscan'
-require 'cgi'
 
 module Pi
 	class Object
@@ -143,22 +140,6 @@ module Pi
 				when UNARY then @str
 				when STRING then @str
 				when COMMENT then @str
-			end
-		end
-		
-		def to_html
-			s = CGI.escapeHTML(inspect.to_s)
-			html = case @t
-				when NUMBER then "<span class='number'>#{s}</span>"
-				when STRING then "<span class='string'>#{s}</span>"
-				when COMMENT then "<span class='comment'>#{s}</span>"
-				else s
-			end
-			
-			if @arg.empty?
-				html
-			else
-				html + "<ul>\n" + @arg.map {|e| "\t<li>" + e.to_html + "</li>\n"}.join + "</ul>\n"
 			end
 		end
 	end
